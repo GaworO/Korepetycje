@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<!--
+<html lang="en">
+-->
+<!--
+ Workaround for bug https://youtrack.jetbrains.com/issue/IDEA-132738 &ndash;&gt;
+@thymesVar id="post" type="your.package.Post"
+@thymesVar id="title" type="String"
+@thymesVar id="content" type="String"
+-->
+
+<head>
+
+    <title>Rejestracja</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/vendor/css/background.css}" rel="stylesheet"/>
+</head>
+<body>
+<form th:action="@{/student/add}" method="post" th:object="${student}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="text-center">Cześć!</h1>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Imię" class="form-control input-lg" th:field="*{name}"/>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Nazwisko" id="lastName" class="form-control input-lg" th:field="*{lastName}"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Login" id="login" class="form-control input-lg" th:field="*{login}"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Password" id="password" class="form-control input-lg" th:field="*{password}"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Number telefonu" id="phoneNumber" class="form-control input-lg"  th:field="*{phoneNumber}"/>
+                </div>
+                <div class="form-group">
+                      <input type="text" placeholder="Email" class="form-control" id="email" th:field="*{email}"/>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-block btn-lg btn-primary" value="Register"/>
+
+                    <!--<span class="pull-right"><a href="#">Register</a></span><span><a href="#">Forgot Password</a></span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>

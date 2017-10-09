@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/vendor/css/background.css}" rel="stylesheet"/>
+    <title>All Classes</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked admin-menu">
+                <li class="active"><a th:href="@{/login/back}" data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                <li class="active"><a th:href="@{/classes/addClasses}" data-target-id="home"><i class="fa fa-home fa-fw"></i>Zapisz się na zajęcia</a></li>
+                <div th:each="clases : ${clases}" >
+                <li><a th:href="@{'/student/twoje/'+ ${student.id})}"  data-target-id="table"><i class="fa fa-table fa-fw"></i>Twoje zajęcia</a></li>
+
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<table>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="text-center">Wszystkie Twoje odbyte zajęcia</h1>
+            </div>
+            <div class="modal-body">
+
+                <div th:each="clases : ${clases}" >
+
+                    <span th:text="${clases.name}"></span>
+                    <span th:text="${clases.date}"></span>
+                    <span th:text="${clases.time}"></span>
+
+                    <!-- <a th:href="@{/classes/update/${clas.id}}">Edytuj</a>-->
+                   <!-- <a th:href="@{/classes/delete/{id}/(id=${clases.id})}">Usuń</a>
+                    <a th:href="@{/classes/update/{id}/(id=${clases.id})}">Edytuj</a>-->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</table>
+
+
+</body>
+</html>

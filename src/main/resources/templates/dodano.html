@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--<<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">-->
+
+<html lang="en">
+
+<!--
+ Workaround for bug https://youtrack.jetbrains.com/issue/IDEA-132738 &ndash;&gt;
+@thymesVar id="post" type="your.package.Post"
+@thymesVar id="title" type="String"
+@thymesVar id="content" type="String"
+-->
+
+<head>
+
+    <title>Dodano</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--    <link th:href="@{/vendor/css/background.css}" rel="stylesheet"/>-->
+    <link rel="stylesheet" href="/vendor/css/findStudent.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked admin-menu">
+                <li class="active"><a href="/login/back" data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+               <!-- <li class="active"><a href="/student/twoje/{id}" data-target-id="home"><i class="fa fa-home fa-fw"></i>Twoje zajęcia</a></li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="text-center">Dodano</h1>
+           </div>
+        </div>
+    </div>
+</body>
+</html>

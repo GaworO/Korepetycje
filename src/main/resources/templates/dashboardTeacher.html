@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/vendor/css/dashboard.css}" rel="stylesheet"/>
+    <script th:attr="src=@{/vendor/js/dashboard.js}"></script>
+    <link th:href="@{/vendor/css/backgroundDashboard.css}" rel="stylesheet"/>
+    <title>Dashboard Teacher</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked admin-menu">
+                <li class="active"><a href="#" data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                <li><a th:href="@{/classes/allTeacher}"  data-target-id="table"><i class="fa fa-table fa-fw"></i>Wszystkie zajęcia</a></li>
+                <li><a th:href="@{/teacher/findStudent}"  data-target-id="calender"><i class="fa fa-calendar fa-fw"></i>Znajdź ucznia</a></li>
+                <li><a th:href="@{/teacher/findDate}"  data-target-id="calender"><i class="fa fa-calendar fa-fw"></i>Zobacz jakie masz zajęcia danego dnia</a></li>
+                <li><a th:href="@{/}"  data-target-id="calender"><i class="fa fa-calendar fa-fw"></i>Wyloguj</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
